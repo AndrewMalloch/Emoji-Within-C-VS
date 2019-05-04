@@ -1,0 +1,18 @@
+#include <io.h>	
+#include <iostream>
+#include <fcntl.h> https://pubs.opengroup.org/onlinepubs/009695399/basedefs/fcntl.h.html
+#include <string>
+
+using namespace std;
+
+/*Example emoji - C, C++, Java*/
+wstring Smile = L"\x263a"; //smiley face
+
+
+int main()
+{
+	_setmode(_fileno(stdout), _O_WTEXT);
+	wcout << Smile;
+
+	system("pause");
+}
